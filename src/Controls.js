@@ -25,12 +25,15 @@ export default class Controls extends Component {
         <input placeholder='title'
                value={this.state.title}
                onChange={ this.updateStuff.bind(this, 'title') }
+               className='title-input'
              />
         <input placeholder='description'
                value={this.state.description}
                onChange={ (event) => this.updateStuff('description', event) }
+               className= 'description-input'
              />
-        <button onClick={() => this.submitToApp() }>
+        <button onClick={() => this.submitToApp() }
+                className='submit-button'>
           Submit
         </button>
       </div>
